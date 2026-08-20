@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f6f3eb;
+  --color-bg-subtle: #efebe0;
+  --color-surface: #ffffff;
+  --color-fg: #1a2332;
+  --color-fg-muted: #5c6570;
+  --color-fg-subtle: #8a9099;
+  --color-primary: #1e4e8c;
+  --color-primary-hover: #173e70;
+  --color-primary-fg: #ffffff;
+  --color-border: #e2ddd2;
+  --color-border-strong: #cfc8b8;
+  --color-ring: #1e4e8c;
+  --color-danger: #9b2c2c;
+  --color-success: #2f6b4f;
+
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-card:
+    0 0 0 1px rgb(26 35 50 / 0.06),
+    0 1px 2px -1px rgb(26 35 50 / 0.06),
+    0 8px 24px -12px rgb(26 35 50 / 0.08);
+  --shadow-card-hover:
+    0 0 0 1px rgb(26 35 50 / 0.08),
+    0 1px 2px -1px rgb(26 35 50 / 0.08),
+    0 12px 28px -12px rgb(26 35 50 / 0.12);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 18%, white);
+    color: var(--color-fg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
