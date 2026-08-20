@@ -4,6 +4,14 @@ A professional online IQ-style assessment. Visitors create an account, complete 
 
 This is **not** a clinically validated intelligence test. It is intended for entertainment and informational purposes.
 
+**GitHub:** [github.com/Aki1983/iq-test](https://github.com/Aki1983/iq-test)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Aki1983/iq-test)
+
+One-click deploy: [vercel.com/new/clone?repository-url=https://github.com/Aki1983/iq-test](https://vercel.com/new/clone?repository-url=https://github.com/Aki1983/iq-test)
+
+After Vercel finishes building, your public site URL will look like `https://iq-test.vercel.app`.
+
 ## Stack
 
 - React 19 + TypeScript
