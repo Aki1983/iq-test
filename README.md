@@ -10,7 +10,7 @@ This is **not** a clinically validated intelligence test. It is intended for ent
 
 One-click deploy: [vercel.com/new/clone?repository-url=https://github.com/Aki1983/iq-test](https://vercel.com/new/clone?repository-url=https://github.com/Aki1983/iq-test)
 
-After Vercel finishes building, your public site URL will look like `https://iq-test.vercel.app`.
+**Do not use `https://iq-test.vercel.app`.** That subdomain already belongs to an unrelated third-party site branded “IQ Test Labs”. Choose a unique Vercel project name (for example `aki-iq-test`) so your URL is `https://YOUR-PROJECT-NAME.vercel.app`.
 
 ## Stack
 
@@ -112,12 +112,14 @@ The bank is in `src/lib/questions.server.ts` (server-only): 60 curated items acr
 This project builds with the Vercel Nitro preset (`npm run build`).
 
 1. Push the repo to GitHub.
-2. Import the project in Vercel.
+2. Import the project in Vercel. **Name the project something unique** — `iq-test` is already taken globally on `vercel.app`.
 3. Set the environment variables above.
 4. Deploy.
 5. Point the Stripe webhook at `https://YOUR_DOMAIN/api/stripe/webhook`.
 
 `npm run build` also applies migrations to `DATABASE_URL`.
+
+Connect GitHub to Vercel first (Vercel → Settings → Login Connections → GitHub), then import [github.com/Aki1983/iq-test](https://github.com/Aki1983/iq-test).
 
 ## Routes
 
